@@ -13,7 +13,7 @@
       </h4>
       <%# conditionally display attached file if post.uploaded_image.attached? %>
         <%# use url_for(post.uploaded_image) as attached file's url %>
-      <% if post.uploaded_image.attached != nil %>
+      <% if post.uploaded_image.attached? != nil %>
         <img src="<%=url_for(post.uploaded_image)%>" class = "img-fluid">
       <%else%>
       <%# otherwise display original image url from database column %>
